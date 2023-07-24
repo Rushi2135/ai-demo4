@@ -1,0 +1,188 @@
+(base) dai@dai-Precision-7820-Tower:~/git_example$ mkdir test5
+(base) dai@dai-Precision-7820-Tower:~/git_example$ cd test5
+(base) dai@dai-Precision-7820-Tower:~/git_example/test5$ git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint: 	git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint: 	git branch -m <name>
+Initialized empty Git repository in /home/dai/git_example/test5/.git/
+(base) dai@dai-Precision-7820-Tower:~/git_example/test5$ sudo git clone https://github.com/Rushi2135/ai-demo4
+Cloning into 'ai-demo4'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+(base) dai@dai-Precision-7820-Tower:~/git_example/test5$ ls
+ai-demo4
+(base) dai@dai-Precision-7820-Tower:~/git_example/test5$ cd ai-demo4/
+(base) dai@dai-Precision-7820-Tower:~/git_example/test5/ai-demo4$ git init 
+error: could not lock config file /home/dai/git_example/test5/ai-demo4/.git/config: Permission denied
+fatal: could not set 'core.repositoryformatversion' to '0'
+(base) dai@dai-Precision-7820-Tower:~/git_example/test5/ai-demo4$ git co
+commit   config   
+(base) dai@dai-Precision-7820-Tower:~/git_example/test5/ai-demo4$ git config --global --add safe.directory .
+(base) dai@dai-Precision-7820-Tower:~/git_example/test5/ai-demo4$ ls
+README.md
+(base) dai@dai-Precision-7820-Tower:~/git_example/test5/ai-demo4$ nano index.html
+nano: /home/dai/anaconda3/lib/libtinfo.so.6: no version information available (required by nano)
+nano: /home/dai/anaconda3/lib/libtinfo.so.6: no version information available (required by nano)
+nano: /home/dai/anaconda3/lib/libncursesw.so.6: no version information available (required by nano)
+nano: /home/dai/anaconda3/lib/libncursesw.so.6: no version information available (required by nano)
+(base) dai@dai-Precision-7820-Tower:~/git_example/test5/ai-demo4$ sudo nano index.html
+(base) dai@dai-Precision-7820-Tower:~/git_example/test5/ai-demo4$ sudo nano Dockerfile
+(base) dai@dai-Precision-7820-Tower:~/git_example/test5/ai-demo4$ git add .
+fatal: detected dubious ownership in repository at '/home/dai/git_example/test5/ai-demo4'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /home/dai/git_example/test5/ai-demo4
+(base) dai@dai-Precision-7820-Tower:~/git_example/test5/ai-demo4$ sudo git add .
+(base) dai@dai-Precision-7820-Tower:~/git_example/test5/ai-demo4$ sudo git commit -m "first com"
+[main 7a5545b] first com
+ 2 files changed, 7 insertions(+)
+ create mode 100644 Dockerfile
+ create mode 100644 index.html
+(base) dai@dai-Precision-7820-Tower:~/git_example/test5/ai-demo4$ sudo git push -u origin main
+Username for 'https://github.com': rushi2135
+Password for 'https://rushi2135@github.com': 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 460 bytes | 460.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Rushi2135/ai-demo4
+   d9a7e3d..7a5545b  main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+(base) dai@dai-Precision-7820-Tower:~/git_example/test5/ai-demo4$ 
+(base) dai@dai-Precision-7820-Tower:~/git_example/test5/ai-demo4$ cd ..
+(base) dai@dai-Precision-7820-Tower:~/git_example/test5$ mkdir testing_test5
+(base) dai@dai-Precision-7820-Tower:~/git_example/test5$ cd testing_test5/
+(base) dai@dai-Precision-7820-Tower:~/git_example/test5/testing_test5$ sudo git cl
+clean   clone   
+(base) dai@dai-Precision-7820-Tower:~/git_example/test5/testing_test5$ sudo git clone https://github.com/Rushi2135/ai-demo4
+Cloning into 'ai-demo4'...
+remote: Enumerating objects: 7, done.
+remote: Counting objects: 100% (7/7), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 7 (delta 0), reused 4 (delta 0), pack-reused 0
+Receiving objects: 100% (7/7), done.
+(base) dai@dai-Precision-7820-Tower:~/git_example/test5/testing_test5$ cd ai-demo4/
+(base) dai@dai-Precision-7820-Tower:~/git_example/test5/testing_test5/ai-demo4$ ls
+Dockerfile  index.html  README.md
+(base) dai@dai-Precision-7820-Tower:~/git_example/test5/testing_test5/ai-demo4$ sudo apt install docker.io
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+docker.io is already the newest version (20.10.21-0ubuntu1~22.04.3).
+The following packages were automatically installed and are no longer required:
+  libflashrom1 libftdi1-2 libllvm13
+Use 'sudo apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 27 not upgraded.
+(base) dai@dai-Precision-7820-Tower:~/git_example/test5/testing_test5/ai-demo4$ sudo docker build -t testFile:v1
+invalid argument "testFile:v1" for "-t, --tag" flag: invalid reference format: repository name must be lowercase
+See 'docker build --help'.
+(base) dai@dai-Precision-7820-Tower:~/git_example/test5/testing_test5/ai-demo4$ sudo docker build -t testfile:v1
+"docker build" requires exactly 1 argument.
+See 'docker build --help'.
+
+Usage:  docker build [OPTIONS] PATH | URL | -
+
+Build an image from a Dockerfile
+(base) dai@dai-Precision-7820-Tower:~/git_example/test5/testing_test5/ai-demo4$ sudo docker build -t testfile:v1 .
+Sending build context to Docker daemon  61.44kB
+Step 1/4 : FROM httpd
+latest: Pulling from library/httpd
+faef57eae888: Pull complete 
+7ebb04e7a9fb: Pull complete 
+50832d624967: Pull complete 
+efcbeeba1c88: Pull complete 
+90997b0c5be2: Pull complete 
+Digest: sha256:8059bdd0058510c03ae4c808de8c4fd2c1f3c1b6d9ea75487f1e5caa5ececa02
+Status: Downloaded newer image for httpd:latest
+ ---> d140b777a247
+Step 2/4 : RUN apt update -y
+ ---> Running in 4d0bac494ea5
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Get:1 http://deb.debian.org/debian bookworm InRelease [151 kB]
+Get:2 http://deb.debian.org/debian bookworm-updates InRelease [52.1 kB]
+Get:3 http://deb.debian.org/debian-security bookworm-security InRelease [48.0 kB]
+Get:4 http://deb.debian.org/debian bookworm/main amd64 Packages [8906 kB]
+Get:5 http://deb.debian.org/debian bookworm-updates/main amd64 Packages [4732 B]
+Get:6 http://deb.debian.org/debian-security bookworm-security/main amd64 Packages [48.0 kB]
+Fetched 9210 kB in 2s (5002 kB/s)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+9 packages can be upgraded. Run 'apt list --upgradable' to see them.
+Removing intermediate container 4d0bac494ea5
+ ---> 2c394a323638
+Step 3/4 : RUN mkdir /scripts
+ ---> Running in f2d8f7f5a81c
+Removing intermediate container f2d8f7f5a81c
+ ---> 902139469b3e
+Step 4/4 : COPY index.html /scripts
+ ---> 021fa2ebd3e6
+Successfully built 021fa2ebd3e6
+Successfully tagged testfile:v1
+(base) dai@dai-Precision-7820-Tower:~/git_example/test5/testing_test5/ai-demo4$ sudo docker run --name testfile:v1 -d -p 7000:80 httpd
+docker: Error response from daemon: Invalid container name (testfile:v1), only [a-zA-Z0-9][a-zA-Z0-9_.-] are allowed.
+See 'docker run --help'.
+(base) dai@dai-Precision-7820-Tower:~/git_example/test5/testing_test5/ai-demo4$ sudo docker run --name web1 -d -p 7000:80 testfile:v1
+4ad1c61befafd9c6903108e8a023175b75eefef3136ae64b8b7a3d3377392d71
+(base) dai@dai-Precision-7820-Tower:~/git_example/test5/testing_test5/ai-demo4$ sudo docker run --name web1 -d -p 7001:80 testfile:v1
+docker: Error response from daemon: Conflict. The container name "/web1" is already in use by container "4ad1c61befafd9c6903108e8a023175b75eefef3136ae64b8b7a3d3377392d71". You have to remove (or rename) that container to be able to reuse that name.
+See 'docker run --help'.
+(base) dai@dai-Precision-7820-Tower:~/git_example/test5/testing_test5/ai-demo4$ sudo docker run --name web2 -d -p 7002:80 testfile:v1
+6cc88f1ae65602a973086febe82d9a3d4487e93dd22797e2314d470e194a616d
+(base) dai@dai-Precision-7820-Tower:~/git_example/test5/testing_test5/ai-demo4$ sudo docker start web1
+web1
+(base) dai@dai-Precision-7820-Tower:~/git_example/test5/testing_test5/ai-demo4$ cat Dockerfile 
+FROM httpd
+RUN apt update -y
+RUN mkdir /scripts
+COPY index.html /scripts
+(base) dai@dai-Precision-7820-Tower:~/git_example/test5/testing_test5/ai-demo4$ sudo nano Dockerfile 
+(base) dai@dai-Precision-7820-Tower:~/git_example/test5/testing_test5/ai-demo4$ sudo docker build -t testfile1:v1 .
+Sending build context to Docker daemon  61.44kB
+Step 1/3 : FROM httpd
+ ---> d140b777a247
+Step 2/3 : RUN apt update -y
+ ---> Using cache
+ ---> 2c394a323638
+Step 3/3 : COPY index.html /usr/local/apache2/htdocs/
+ ---> 0b605eaf334f
+Successfully built 0b605eaf334f
+Successfully tagged testfile1:v1
+(base) dai@dai-Precision-7820-Tower:~/git_example/test5/testing_test5/ai-demo4$ sudo docker run --name web -d -p 7005:80 testfile1:v1
+24b300658753030f1f017a8dcdebc6610464e1dd8eadb9fb2bb39cff8cda236f
+(base) dai@dai-Precision-7820-Tower:~/git_example/test5/testing_test5/ai-demo4$ cat Dockerfile 
+FROM httpd
+RUN apt update -y
+COPY index.html /usr/local/apache2/htdocs/ 
+(base) dai@dai-Precision-7820-Tower:~/git_example/test5/testing_test5/ai-demo4$ sudo git add .
+(base) dai@dai-Precision-7820-Tower:~/git_example/test5/testing_test5/ai-demo4$ sudo git commit -m "Final com"
+[main 59ab0e4] Final com
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+(base) dai@dai-Precision-7820-Tower:~/git_example/test5/testing_test5/ai-demo4$ sudo push -u origin main
+sudo: push: command not found
+(base) dai@dai-Precision-7820-Tower:~/git_example/test5/testing_test5/ai-demo4$ sudo git push -u origin main
+Username for 'https://github.com': rushi2135
+Password for 'https://rushi2135@github.com': 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 391 bytes | 391.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Rushi2135/ai-demo4
+   7a5545b..59ab0e4  main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+(base) dai@dai-Precision-7820-Tower:~/git_example/test5/testing_test5/ai-demo4
